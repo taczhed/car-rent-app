@@ -1,7 +1,7 @@
 <script>
     import checkLoginStatus from "../Functions/LoginCheck";
-    import UserTableRow from "../components/UserTableRow.svelte";
-    import UsersManagingTableRow from "../components/AdminUsersManagingTableRow.svelte";
+    import UserTableRow from "../components/User/UserTableRow.svelte";
+    import UsersManagingTableRow from "../components/Admin/AdminUsersManagingTableRow.svelte";
 
     const reload = async () => {
         await fetchUserList('UserList')

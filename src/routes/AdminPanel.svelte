@@ -1,9 +1,9 @@
 <script>
     import checkLoginStatus from "../Functions/LoginCheck";
-    import AdminPendingTableRow from "../components/AdminPendingTableRow.svelte";
-    import AdminActiveTableRow from "../components/AdminActiveTableRow.svelte";
-    import AdminPlaceholderTableRow from "../components/AdminPlaceholderTableRow.svelte";
-    import AdminArchiveTableRow from "../components/AdminArchiveTableRow.svelte";
+    import AdminPendingTableRow from "../components/Admin/AdminPendingTableRow.svelte";
+    import AdminActiveTableRow from "../components/Admin/AdminActiveTableRow.svelte";
+    import AdminPlaceholderTableRow from "../components/Admin/AdminPlaceholderTableRow.svelte";
+    import AdminArchiveTableRow from "../components/Admin/AdminArchiveTableRow.svelte";
 
     checkLoginStatus('admin')
 

@@ -1,6 +1,6 @@
 <script>
-    import Popup from "./Popup.svelte";
-    import checkToday from "../Functions/CheckToday";
+    import Popup from "../Popup.svelte";
+    import checkToday from "../../Functions/CheckToday";
 
     export let carId;
     export let user;

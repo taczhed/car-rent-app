@@ -1,5 +1,5 @@
 <script>
-    import Popup from "./Popup.svelte";
+    import Popup from "../Popup.svelte";
 
     export let carId;
     export let user;

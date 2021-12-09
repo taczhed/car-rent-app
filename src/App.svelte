@@ -8,8 +8,8 @@
 	import Login from "./routes/Login.svelte";
 	import Register from "./routes/Register.svelte";
 	import AdminPanel from "./routes/AdminPanel.svelte";
-	import ManageReservations from "./routes/ManageReservations.svelte";
-	import UserManage from "./routes/UserManage.svelte";
+	import ManageReservations from "./routes/UserManageReservations.svelte";
+	import UserManage from "./routes/AdminUserManage.svelte";
 </script>
 
 <main class="h-screen">

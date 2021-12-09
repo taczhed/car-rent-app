@@ -1,8 +1,7 @@
 <script>
     import checkLoginStatus from "../Functions/LoginCheck";
-    import UserTableRow from "../components/UserTableRow.svelte";
-    import AdminPlaceholderTableRow from "../components/AdminPlaceholderTableRow.svelte";
-    import UserPlaceholderTableRow from "../components/UserPlaceholderTableRow.svelte";
+    import UserTableRow from "../components/User/UserTableRow.svelte";
+    import UserPlaceholderTableRow from "../components/User/UserPlaceholderTableRow.svelte";
 
     const reload = async () => {
         await fetchReservations()
@@ -16,7 +15,6 @@
         const res = await fetch(`./backend/fetchUserReservations.php`, {method: "POST", body: data})
         data = await res.json()
         reqestedReservations = data
-
         return data
     }
 
@@ -28,6 +26,7 @@
     <h1 class="text-center text-4xl font-bold p-8 bg-gray-600 text-white">Moje rezerwacje</h1>
     <table class="bg-gray-500">
         <thead class="bg-gray-300"><tr>
+            <th class="px-6 py-2 text-xs text-gray-500">Status</th>
             <th class="px-6 py-2 text-xs text-gray-500">Marka</th>
             <th class="px-6 py-2 text-xs text-gray-500">Model</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data rozpoczęcia</th>
@@ -42,6 +41,7 @@
             {#if res.length !== 0}
                 {#each res as data, i}
                     <UserTableRow
+                        status={data.status}
                         carId={data.carId}
                         brand={data.brand}
                         model={data.model}

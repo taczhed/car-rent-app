@@ -9,6 +9,7 @@
 	import Register from "./routes/Register.svelte";
 	import AdminPanel from "./routes/AdminPanel.svelte";
 	import ManageReservations from "./routes/ManageReservations.svelte";
+	import UserManage from "./routes/UserManage.svelte";
 </script>
 
 <main class="h-screen">
@@ -22,6 +23,7 @@
 		"/register": Register,
 		"/admin": AdminPanel,
 		"/userPanel": ManageReservations,
+		"/users": UserManage,
 		"*": NotFound,
 	}
 	}/>

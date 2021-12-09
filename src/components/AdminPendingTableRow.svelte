@@ -9,6 +9,11 @@
     export let dateTo;
     export let reservationId;
     export let reload;
+    export let price;
+
+    const startDay = new Date(dateFrom)
+    const endDay = new Date(dateTo)
+    let sum = `${(parseInt((endDay - startDay) / (24 * 3600 * 1000)) + 1) * price} zł`
 
     let isPopUpSuccess = true
     let popUpText = ""
@@ -54,6 +59,7 @@
     <td class="px-6 py-4"><div class="text-sm text-gray-500 text-center">{model}</div></td>
     <td class="px-6 py-4 text-sm text-gray-500 text-center">{dateFrom}</td>
     <td class="px-6 py-4 text-sm text-gray-500 text-center">{dateTo}</td>
+    <td class="px-6 py-4 text-sm text-gray-500 text-center">{sum}</td>
     <td class="px-6 py-4">
         <button on:click={() => accept()} class="px-4 py-2 text-sm text-white bg-green-700 rounded">Akceptuj</button>
         <button on:click={() => reject()} class="px-4 py-2 text-sm text-white bg-red-700 rounded">Odrzuć</button>

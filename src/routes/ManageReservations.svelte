@@ -5,21 +5,22 @@
     import UserPlaceholderTableRow from "../components/UserPlaceholderTableRow.svelte";
 
     const reload = async () => {
-        await fetchReservations('User')
+        await fetchReservations()
     }
 
-    const fetchReservations = async (type) => {
+    const fetchReservations = async () => {
         const userData = await checkLoginStatus('userPanel')
+
         let data = new FormData()
         data.append('user_id', userData.id)
-        const res = await fetch(`./backend/fetch${type}Reservations.php`, {method: "POST", body: data})
+        const res = await fetch(`./backend/fetchUserReservations.php`, {method: "POST", body: data})
         data = await res.json()
-        if (type === 'User') reqestedReservations = data
-        console.log('pobieram...')
+        reqestedReservations = data
+
         return data
     }
 
-    let reqestedReservations = fetchReservations('User')
+    let reqestedReservations = fetchReservations()
 
 </script>
 
@@ -31,6 +32,7 @@
             <th class="px-6 py-2 text-xs text-gray-500">Model</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data rozpoczęcia</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data zakończenia</th>
+            <th class="px-6 py-2 text-xs text-gray-500">Kosz całkowity</th>
             <th class="px-6 py-2 text-xs text-gray-500"></th>
         </tr></thead>
         <tbody class="bg-white">
@@ -46,6 +48,7 @@
                         dateFrom={data.dateFrom}
                         dateTo={data.dateTo}
                         reservationId={data.reservationId}
+                        price={data.price}
                         reload={reload}
                     />
                 {/each}

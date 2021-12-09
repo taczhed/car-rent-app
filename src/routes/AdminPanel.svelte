@@ -37,6 +37,7 @@
             <th class="px-6 py-2 text-xs text-gray-500">Model</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data rozpoczęcia</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data zakończenia</th>
+            <th class="px-6 py-2 text-xs text-gray-500">Sumaryczna cena</th>
             <th class="px-6 py-2 text-xs text-gray-500"></th>
         </tr></thead>
         <tbody class="bg-white">
@@ -53,6 +54,7 @@
                         dateFrom={data.dateFrom}
                         dateTo={data.dateTo}
                         reservationId={data.reservationId}
+                        price={data.price}
                         reload={reload}
                     />
                 {/each}
@@ -73,6 +75,7 @@
             <th class="px-6 py-2 text-xs text-gray-500">Model</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data rozpoczęcia</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data zakończenia</th>
+            <th class="px-6 py-2 text-xs text-gray-500">Sumaryczna cena</th>
             <th class="px-6 py-2 text-xs text-gray-500"></th>
         </tr></thead>
         <tbody class="bg-white">
@@ -88,6 +91,7 @@
                         model={data.model}
                         dateFrom={data.dateFrom}
                         dateTo={data.dateTo}
+                        price={data.price}
                         reservationId={data.reservationId}
                         reload={reload}
                     />
@@ -108,6 +112,7 @@
             <th class="px-6 py-2 text-xs text-gray-500">Model</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data rozpoczęcia</th>
             <th class="px-6 py-2 text-xs text-gray-500">Data zakończenia</th>
+            <th class="px-6 py-2 text-xs text-gray-500">Sumaryczna cena</th>
             <th class="px-6 py-2 text-xs text-gray-500">Czas przerwania zgłoszenia</th>
         </tr></thead>
         <tbody class="bg-white">
@@ -123,6 +128,7 @@
                         model={data.model}
                         dateFrom={data.dateFrom}
                         dateTo={data.dateTo}
+                        price={data.price}
                         time={data.time}
                     />
                 {/each}

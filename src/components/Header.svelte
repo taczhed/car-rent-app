@@ -29,6 +29,9 @@
                                     <li class="p-6 inline-block border-b-4 border-transparent hover:border-black transition duration-150 ease-in">
                                         <a class="p-3 hover:no-underline" href="#/admin">Admin</a>
                                     </li>
+                                    <li class="p-6 inline-block border-b-4 border-transparent hover:border-black transition duration-150 ease-in">
+                                        <a class="p-3 hover:no-underline" href="#/users">Użytkownicy</a>
+                                    </li>
                                 {:else}
                                     <li class="p-6 inline-block border-b-4 border-transparent hover:border-black transition duration-150 ease-in">
                                         <a class="p-3 hover:no-underline" href="#/">Samochody</a>
@@ -45,7 +48,7 @@
                             {/await}
 
                             {#await UserInformationPromise then user}
-                                {#if user.accountType === "default"}
+                                {#if user.accountType === 'default'}
                                     <li class="p-6 inline-block border-b-4 border-transparent hover:border-black transition duration-150 ease-in">
                                         <a class="p-3 hover:no-underline" href="#/userPanel">Panel użytkownika</a>
                                     </li>

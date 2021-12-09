@@ -6,6 +6,7 @@ const checkLoginStatus = async (forbiddenPage) => {
     else if (forbiddenPage === "admin" && data.account_type !== 'admin') location = "/"
     else if (forbiddenPage === "home" && data.account_type === 'admin') location = "/#/admin"
     else if (forbiddenPage === "userPanel" && data.account_type !== 'default') location = "/"
+    else if (forbiddenPage === "userList" && data.account_type !== 'admin') location = "/"
 
     if (data.status === 'loggedIn') {
 

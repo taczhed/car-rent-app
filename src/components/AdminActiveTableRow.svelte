@@ -10,6 +10,13 @@
     export let dateTo;
     export let reservationId;
     export let reload;
+    export let price;
+
+    const startDay = new Date(dateFrom)
+    const endDay = new Date(dateTo)
+    let sum = `${(parseInt((endDay - startDay) / (24 * 3600 * 1000)) + 1) * price} zł`
+
+
     const today = checkToday()
 
     const dateToOrginal = dateTo
@@ -60,6 +67,7 @@
     <td class="px-6 py-4"><div class="text-sm text-gray-900 text-center">{user}</div></td>
     <td class="px-6 py-4"><div class="text-sm text-gray-900 text-center">{brand}</div></td>
     <td class="px-6 py-4"><div class="text-sm text-gray-500 text-center">{model}</div></td>
+    <td class="px-6 py-4"><div class="text-sm text-gray-500 text-center">{sum}</div></td>
     <td class="px-6 py-4 text-sm text-gray-500 text-center">
         <input
             min={today}

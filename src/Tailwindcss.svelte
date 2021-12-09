@@ -9,6 +9,6 @@
 
     nav a:visited {
         text-decoration: none;
-        color: white;
+        color: black;
     }
 </style>

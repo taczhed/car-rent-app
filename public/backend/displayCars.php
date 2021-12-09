@@ -1,7 +1,7 @@
 <?php
     require_once 'db.php';
 
-    $sql = "SELECT * FROM samochody";
+    $sql = "SELECT * FROM cars";
     $result = mysqli_query($conn, $sql);
 
     $arr = array();

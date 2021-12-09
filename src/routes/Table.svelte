@@ -1,6 +1,6 @@
 <script>
     async function getItems() {
-        const URL = "./backend/display.php";
+        const URL = "./backend/displayCars.php";
         let res = await fetch(URL, {method: "GET"});
         res = await res.json();
         return res;

@@ -11,7 +11,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "cray": "#f7bf50"
+      }
+    },
   },
   variants: {
     extend: {},

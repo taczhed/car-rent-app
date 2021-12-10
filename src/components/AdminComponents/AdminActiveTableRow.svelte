@@ -86,7 +86,7 @@
         >
     </td>
     <td class="px-6 py-4">
-        <button on:click={() => saveChanges()} class="px-4 py-2 text-sm text-white bg-green-700 rounded" disabled={dateToOrginal === dateTo && dateFromOrginal === dateFrom}>Zapisz</button>
+        <button on:click={() => saveChanges()} class="px-4 py-2 text-sm text-white bg-green-700 rounded" disabled={dateToOrginal === dateTo && dateFromOrginal === dateFrom}>Zapisz zmiany</button>
         <button on:click={() => reject()} class="px-4 py-2 text-sm text-white bg-red-700 rounded">Odwołaj rezerwację</button>
     </td>
 </tr>

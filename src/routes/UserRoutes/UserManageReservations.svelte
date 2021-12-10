@@ -1,7 +1,7 @@
 <script>
-    import checkLoginStatus from "../Functions/LoginCheck";
-    import UserTableRow from "../components/User/UserTableRow.svelte";
-    import UserPlaceholderTableRow from "../components/User/UserPlaceholderTableRow.svelte";
+    import checkLoginStatus from "../../Functions/LoginCheck";
+    import UserTableRow from "../../components/UserComponents/UserTableRow.svelte";
+    import UserPlaceholderTableRow from "../../components/UserComponents/UserPlaceholderTableRow.svelte";
 
     const reload = async () => {
         await fetchReservations()
